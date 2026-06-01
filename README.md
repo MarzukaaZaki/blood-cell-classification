@@ -40,7 +40,7 @@ physical, and optical properties of peripheral blood smears:
     geometric and morphological operations resolves this failure by forcing
     spatial invariance on top of pixel noise.
 
-📊 Performance Leaderboard (1% Labels, 300 Epochs)
+## Performance Leaderboard (1% Labels, 300 Epochs)
 
 The table below compiles our final, 300-epoch, pretrained ResNet-18 test-set
 results, showing the progression of our ablation study:
@@ -54,7 +54,7 @@ results, showing the progression of our ablation study:
 | **FixMatch + Hema-Aug + Diffusion ($t=300$)** | **$94.45\%$**      | **$0.939$**      | **$0.939$**      | **$0.9390$**      | **$0.860$**       |
 | *Supervised Upper Bound (10% Labeled)*        | *$97.46\%$*        | *$0.980$*        | *$0.970$*        | *$0.9748$*        | *$0.940$*         |
 
-⚙️ Core Implementations
+## Core Implementations
 
 1. Hema-Aug: Domain-Aware Augmentation Policy
 
@@ -92,7 +92,7 @@ memory and RAM Out-of-Memory restarts. We engineered two safeguards:
     tensor in memory, causing RAM usage to expand over 300 epochs. We replace
     them with a lightweight, non-caching custom generator.
 
-🚀 How to Reproduce
+### How to Reproduce
 
 1. Environment Setup
 
@@ -118,55 +118,11 @@ Finally, load these CSVs into a centralized plotting notebook to render
 high-resolution validation curves, per-class F1 comparisons, and delta confusion
 matrices.
 
-📃 References
+## References
 
-  - [1] K. Sohn, D. Berthelot, C.-L. Li, Z. Zhang, N. Carlini, E. D. Cubuk, A.
-    Kurakin, H. Zhang, and C. Raffel, "FixMatch: Simplifying Semi-Supervised
-    Learning with Consistency and Confidence," Advances in Neural Information
-    Processing Systems (NeurIPS), vol. 33, pp. 596–608, 2020.
-  - [2] D. Berthelot, N. Carlini, I. Goodfellow, N. Papernot, A. Oliver, and C.
-    Raffel, "MixMatch: A Holistic Approach to Semi-Supervised Learning,"
-    Advances in Neural Information Processing Systems (NeurIPS), vol. 32,
-    pp. 5049–5059, 2019.
-  - [3] Q. Xie, Z. Dai, E. Hovy, T.-M. Luong, and Q. V. Le, "Unsupervised Data
-    Augmentation for Consistency Training," Advances in Neural Information
-    Processing Systems (NeurIPS), vol. 33, pp. 6277–6288, 2020.
-  - [4] B. Zhang, Y. Wang, W. Hou, H. Wu, J. Wang, M. Okumura, and T. Shinozaki,
-    "FlexMatch: Boosting Semi-Supervised Learning with Curriculum
-    Pseudo-Labeling," Advances in Neural Information Processing Systems
-    (NeurIPS), vol. 34, pp. 18408–18419, 2021.
-  - [5] Y. Wang, H. Chen, Q. Heng, W. Hou, Y. Fan, Z. Wu, J. Wang, M. Savvides,
-    T. Shinozaki, B. Raj, B. Schiele, and X. Xie, "FreeMatch: Self-adaptive
-    Thresholding for Semi-Supervised Learning," in International Conference on
-    Learning Representations (ICLR), 2023.
-  - [6] D. Berthelot, N. Carlini, E. D. Cubuk, A. Kurakin, K. Sohn, H. Zhang,
-    and C. Raffel, "ReMixMatch: Semi-Supervised Learning with Distribution
-    Matching and Augmentation Anchoring," in International Conference on
-    Learning Representations (ICLR), 2020.
-  - [7] E. D. Cubuk, B. Zoph, J. Shlens, and Q. V. Le, "RandAugment: Practical
-    Automated Data Augmentation with a Reduced Search Space," in Proceedings of
-    the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops
-    (CVPRW), pp. 702–703, 2020.
-  - [8] D. Tellez, G. Litjens, P. Bándi, W. Bulten, J.-M. Bokhorst, F. Ciompi,
-    and J. van der Laak, "Quantifying the Effects of Data Augmentation and Stain
-    Color Normalization in Convolutional Neural Networks for Computational
-    Pathology," Medical Image Analysis, vol. 58, p. 101544, 2019.
-  - [9] J. Ho, A. Jain, and P. Abbeel, "Denoising Diffusion Probabilistic
-    Models," Advances in Neural Information Processing Systems (NeurIPS),
-    vol. 33, pp. 6840–6851, 2020.
-  - [10] A. Kazerouni, E. K. Aghdam, M. Heidari, R. Azad, M. Fayyaz, I.
-    Hacihaliloglu, and D. Merhof, "Diffusion Models in Medical Imaging: A
-    Comprehensive Survey," Medical Image Analysis, vol. 88, p. 102846, 2023.
-  - [11] K. He, X. Zhang, S. Ren, and J. Sun, "Deep Residual Learning for Image
-    Recognition," in Proceedings of the IEEE Conference on Computer Vision and
-    Pattern Recognition (CVPR), pp. 770–778, 2016.
-  - [12] R. Wightman, "PyTorch Image Models," GitHub, 2019. [Online]. Available:
-    https://github.com/huggingface/pytorch-image-models
-  - [13] J.-C. Su, Z. Cheng, and S. Maji, "A Realistic Evaluation of
-    Semi-Supervised Learning for Fine-Grained Classification," in Proceedings of
-    the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR),
-    pp. 12966–12976, 2021.
-  - [14] S. C. Huang, A. Pareek, R. Zamanian, I. Banerjee, and M. P. Lungren,
-    "ReVisiting Semi-supervised Learning for Medical Image Classification," in
-    Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
-    Recognition Workshops (CVPRW), 2023.
+[1] Sohn, K., et al. "FixMatch: Simplifying Semi-Supervised Learning with Consistency and Confidence." Advances in Neural Information Processing Systems (NeurIPS), 2020. Link
+[2] MedMNIST v2 Benchmark. Nature Scientific Data, 2023. Link
+[3] Wang, Y., et al. "FreeMatch: Self-Adaptive Thresholding for Semi-Supervised Learning." International Conference on Learning Representations (ICLR), 2023. Link
+[4] Ho, J., et al. "Denoising Diffusion Probabilistic Models." Advances in Neural Information Processing Systems (NeurIPS), 2020. Link
+[5] Albumentations. Fast and Flexible Image Augmentations, 2020. Link
+[6] timm (PyTorch Image Models). Hugging Face, 2019. Link
